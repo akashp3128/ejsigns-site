@@ -4,9 +4,9 @@ import { FC } from 'react';
 import Image from 'next/image';
 
 const logos = [
-  '/vercel.svg',
-  '/next.svg',
-  '/globe.svg', // correct static path
+  'https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg',
+  'https://upload.wikimedia.org/wikipedia/commons/7/7d/Carhartt_logo.svg',
+  'https://upload.wikimedia.org/wikipedia/commons/2/20/Adidas_Logo.svg',
 ];
 
 const LogosMarquee: FC = () => {
