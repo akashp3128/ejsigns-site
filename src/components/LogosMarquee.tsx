@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const logos = [
   { src: 'https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg', color: '#1D3557' },
-  { src: 'https://cdn.jsdelivr.net/npm/simple-icons@9/icons/carhartt.svg', color: '#FFA700' }, // gold
+  { src: 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Carhartt_logo_%28yellow%29.svg', color: undefined },
   { src: 'https://upload.wikimedia.org/wikipedia/commons/2/20/Adidas_Logo.svg', color: '#1D3557' },
   { src: 'https://cdn.jsdelivr.net/npm/simple-icons@9/icons/puma.svg', color: '#1D3557' },
 ];
