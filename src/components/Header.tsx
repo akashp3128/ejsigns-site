@@ -86,7 +86,7 @@ const Header: FC = () => {
               <Link
                 key={href}
                 href={href}
-                className={`text-base ${active === href.substring(1) ? 'text-brand font-semibold' : 'text-foreground/80'} hover:text-foreground`}
+                className={`text-base ${active === href.substring(1) ? 'text-brand font-semibold' : 'text-foreground'} hover:text-brand`}
                 onClick={() => setOpen(false)}
               >
                 {label}
