@@ -1,11 +1,13 @@
 "use client";
 import { FC, useRef } from "react";
+import { Oswald } from "next/font/google";
 import { motion, Variants, useScroll, useTransform } from "framer-motion";
 import BackgroundVideo from "./BackgroundVideo";
 import Link from "next/link";
 
 const HeroSection: FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const oswald = Oswald({ weight: ["400", "500", "700"], subsets: ["latin"] });
 
   // Track scroll position for parallax background
   const { scrollYProgress } = useScroll({
@@ -57,20 +59,19 @@ const HeroSection: FC = () => {
       >
         <motion.h1
           variants={child}
-          className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4"
+          className={`text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4 ${oswald.className}`}
         >
-          Fast, affordable, high-quality
+          Quality Products. On-Time, Every Time.
         </motion.h1>
-        <motion.h1
+        <motion.h2
           variants={child}
-          className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6"
+          className={`text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight mb-6 ${oswald.className}`}
         >
-          contract Screen&nbsp;Printing&nbsp;&amp;&nbsp;Embroidery
-        </motion.h1>
+          Screen Printing • Embroidery • Digitizing
+        </motion.h2>
 
         <motion.p variants={child} className="text-lg sm:text-xl mb-8">
-          Helping businesses and organizations make their brand stand out since
-          2019.
+          Trusted by businesses and organizations nationwide for rapid turnaround and unmatched craftsmanship.
         </motion.p>
 
         <motion.div variants={child}>
