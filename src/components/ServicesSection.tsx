@@ -3,20 +3,9 @@ import { FC } from 'react'
 import SectionHeading from './SectionHeading'
 import Image from 'next/image'
 import Reveal from './Reveal'
-import { motion, Variants } from 'framer-motion'
-
-const services = [
-  {
-    title: 'Screen Printing',
-    desc: 'High-quality prints with vibrant colors, perfect for tee shirts, hoodies, and more.',
-    image: 'https://images.unsplash.com/photo-1558704164-ab7a0016c1f3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  },
-  {
-    title: 'Embroidery',
-    desc: 'Premium stitching for hats, polos, jackets, and uniforms that stand the test of time.',
-    image: 'https://images.unsplash.com/photo-1657668282135-b620193e7801?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  },
-]
+import { motion, Variants, MotionProps } from 'framer-motion'
+import Link from 'next/link'
+import { services } from '../data/services'
 
 const container: Variants = {
   hidden: {},
@@ -38,6 +27,8 @@ const card: Variants = {
   },
 };
 
+const MotionLink = motion(Link);
+
 const ServicesSection: FC = () => {
   return (
     <section id="services" className="py-24 sm:py-32 bg-eggshell">
@@ -57,10 +48,11 @@ const ServicesSection: FC = () => {
         viewport={{ once: true, amount: 0.2 }}
       >
         {services.map((service) => (
-          <motion.div
+          <MotionLink
             key={service.title}
-            variants={card}
+            variants={card as Variants}
             className="group rounded-lg overflow-hidden shadow-card hover:shadow-lg transition-shadow bg-white"
+            href={`/services/${service.slug}`}
           >
             <div className="relative h-64 w-full">
               <Image
@@ -79,7 +71,7 @@ const ServicesSection: FC = () => {
                 {service.desc}
               </p>
             </div>
-          </motion.div>
+          </MotionLink>
         ))}
       </motion.div>
     </section>
