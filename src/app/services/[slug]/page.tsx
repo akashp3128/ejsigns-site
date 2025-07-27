@@ -6,7 +6,7 @@ interface Props {
   params: { slug: string };
 }
 
-export default function ServiceGallery({ params }: Props) {
+export default async function ServiceGallery({ params }: Props) {
   const service = services.find((s) => s.slug === params.slug);
   if (!service) notFound();
 

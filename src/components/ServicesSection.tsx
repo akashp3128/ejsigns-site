@@ -41,7 +41,7 @@ const ServicesSection: FC = () => {
 
       {/* Staggered cards */}
       <motion.div
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-12 md:grid-cols-2"
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:grid lg:grid-cols-3 gap-8 flex overflow-x-auto lg:overflow-visible snap-x snap-mandatory"
         variants={container}
         initial="hidden"
         whileInView="visible"
@@ -51,7 +51,7 @@ const ServicesSection: FC = () => {
           <MotionLink
             key={service.title}
             variants={card as Variants}
-            className="group rounded-lg overflow-hidden shadow-card hover:shadow-lg transition-shadow bg-white"
+            className="group rounded-lg overflow-hidden shadow-card hover:shadow-lg transition-shadow bg-white snap-center shrink-0 w-4/5 sm:w-2/3 lg:w-auto"
             href={`/services/${service.slug}`}
           >
             <div className="relative h-64 w-full">
