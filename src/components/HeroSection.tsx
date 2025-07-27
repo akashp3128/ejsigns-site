@@ -42,7 +42,7 @@ const HeroSection: FC = () => {
     >
       {/* Parallax video background */}
       <BackgroundVideo
-        src="https://cdn.coverr.co/videos/coverr-embroidery-machine-3846/1080p.mp4" /* mock video */
+        src="/hero.mp4"
         style={{ scale: bgScale, y: bgY }}
       />
       {/* Blue tint overlay for contrast */}
