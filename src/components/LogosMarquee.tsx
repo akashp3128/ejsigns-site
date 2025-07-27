@@ -13,9 +13,9 @@ const logos = [
 const LogosMarquee: FC = () => {
   return (
     <section className="py-12 bg-eggshell border-y border-black/10 overflow-hidden" aria-label="Our clients">
-      <div className="whitespace-nowrap animate-marquee flex">
-        {logos.concat(logos).concat(logos).map(({ src, color }, i) => (
-          <div key={i} className="w-32 h-16 relative mx-8 inline-block">
+      <div className="whitespace-nowrap animate-marquee flex items-center">
+        {logos.concat(logos).map(({ src, color }, i) => (
+          <div key={i} className="w-32 h-16 relative px-10 inline-block flex-shrink-0">
             <Image src={src} alt="client logo" fill style={{ color }} className="object-contain" />
           </div>
         ))}
