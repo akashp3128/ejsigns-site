@@ -1,6 +1,7 @@
 "use client";
 import { FC, useRef } from "react";
 import { motion, Variants, useScroll, useTransform } from "framer-motion";
+import BackgroundVideo from "./BackgroundVideo";
 import Link from "next/link";
 
 const HeroSection: FC = () => {
@@ -39,10 +40,11 @@ const HeroSection: FC = () => {
       id="hero"
       className="relative flex items-center justify-center h-[80vh] min-h-[520px] overflow-hidden text-center"
     >
-      {/* Parallax background */}
-      <motion.div
+      {/* Parallax video background */}
+      <BackgroundVideo
+        src="/hero.mp4" /* TODO: replace with real video path */
+        poster="/hero-poster.jpg" /* optional poster */
         style={{ scale: bgScale, y: bgY }}
-        className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1663433567177-9f94be0bff4c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center"
       />
       {/* Blue tint overlay for contrast */}
       <div className="absolute inset-0 bg-foreground/80 mix-blend-multiply" />
