@@ -5,9 +5,9 @@ import Image from 'next/image';
 
 const logos = [
   'https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg',
-  'https://upload.wikimedia.org/wikipedia/commons/e/e0/Carhartt_logo.svg',
+  'https://cdn.jsdelivr.net/npm/simple-icons@9/icons/carhartt.svg',
   'https://upload.wikimedia.org/wikipedia/commons/2/20/Adidas_Logo.svg',
-  'https://upload.wikimedia.org/wikipedia/commons/f/fd/Puma_logo.svg',
+  'https://cdn.jsdelivr.net/npm/simple-icons@9/icons/puma.svg',
 ];
 
 const LogosMarquee: FC = () => {
