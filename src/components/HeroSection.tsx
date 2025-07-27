@@ -50,7 +50,7 @@ const HeroSection: FC = () => {
         style={{ scale: bgScale, y: bgY }}
       />
       {/* Blue tint overlay for contrast */}
-      <div className="absolute inset-0 bg-foreground/80 mix-blend-multiply" />
+      <div className="absolute inset-0 bg-foreground/90 mix-blend-multiply" />
 
       {/* Content */}
       <motion.div
@@ -61,13 +61,13 @@ const HeroSection: FC = () => {
       >
         <motion.h1
           variants={child}
-          className={`text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4 ${oswald.className}`}
+          className={`uppercase tracking-wide text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,.35)] ${oswald.className}`}
         >
           Quality Products. On-Time, Every Time.
         </motion.h1>
         <motion.h2
           variants={child}
-          className={`text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight mb-6 ${oswald.className}`}
+          className={`tracking-wide text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight mb-6 drop-shadow-[0_2px_4px_rgba(0,0,0,.35)] ${oswald.className}`}
         >
           Screen Printing • Embroidery • Digitizing
         </motion.h2>
@@ -76,7 +76,13 @@ const HeroSection: FC = () => {
           Trusted by businesses and organizations nationwide for rapid turnaround and unmatched craftsmanship.
         </motion.p>
 
-        <motion.div variants={child}>
+        <motion.div
+          variants={child}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          animate={{ y: [0, -4, 0] }}
+          transition={{ repeat: Infinity, repeatDelay: 5, duration: 0.8 }}
+        >
           <Link
             href="#contact"
             className="inline-flex items-center justify-center transition-transform rounded-full font-medium text-base h-12 px-8 bg-brand-accent text-background hover:scale-105"
