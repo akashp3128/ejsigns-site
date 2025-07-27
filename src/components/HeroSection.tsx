@@ -1,13 +1,15 @@
 "use client";
 import { FC, useRef } from "react";
 import { Oswald } from "next/font/google";
+
+// Font loader must be at module scope
+const oswald = Oswald({ weight: ["400", "500", "700"], subsets: ["latin"] });
 import { motion, Variants, useScroll, useTransform } from "framer-motion";
 import BackgroundVideo from "./BackgroundVideo";
 import Link from "next/link";
 
 const HeroSection: FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const oswald = Oswald({ weight: ["400", "500", "700"], subsets: ["latin"] });
 
   // Track scroll position for parallax background
   const { scrollYProgress } = useScroll({
