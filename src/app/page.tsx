@@ -1,7 +1,7 @@
 import HeroSection from "../components/HeroSection";
 import ServicesSection from "../components/ServicesSection";
 import AboutSection from "../components/AboutSection";
-import LogosMarquee from "../components/LogosMarquee";
+import LogosTicker from "../components/LogosTicker";
 import FAQSection from "../components/FAQSection";
 import ContactSection from "../components/ContactSection";
 
@@ -11,7 +11,7 @@ export default function Home() {
       <HeroSection />
       <ServicesSection />
       <AboutSection />
-      <LogosMarquee />
+      <LogosTicker />
       <FAQSection />
       <ContactSection />
     </>
