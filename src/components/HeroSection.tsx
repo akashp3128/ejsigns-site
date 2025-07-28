@@ -2,8 +2,10 @@
 import { FC, useRef } from "react";
 import { Oswald } from "next/font/google";
 
-// Font loader must be at module scope
+// Module-scope font loader
 const oswald = Oswald({ weight: ["400", "500", "700"], subsets: ["latin"] });
+
+// Font loader must be at module scope
 import { motion, Variants, useScroll, useTransform } from "framer-motion";
 import BackgroundVideo from "./BackgroundVideo";
 import Link from "next/link";
